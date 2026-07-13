@@ -711,7 +711,7 @@
   "variable": [
     {
       "key": "base_url",
-      "secret": true
+      "value": "https://intelligent-forgiveness-production-a1c4.up.railway.app"
     },
     {
       "key": "token",
