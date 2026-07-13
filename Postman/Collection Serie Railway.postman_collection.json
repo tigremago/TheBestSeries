@@ -1,0 +1,721 @@
+{
+  "info": {
+    "_postman_id": "fa229ee6-8715-47a6-addd-3583881d0fb4",
+    "name": "Collection Serie Railway",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54915051",
+    "_collection_link": "https://go.postman.co/collection/54915051-fa229ee6-8715-47a6-addd-3583881d0fb4?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Usuario",
+      "item": [
+        {
+          "name": "PostUsuario",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre_usuario\": \"Ignacio\",\r\n    \"anio_ingreso\": 2026\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/usuarios",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetUsuario",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/usuarios/5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteUsuario",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/usuarios/5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutUsuario",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_usuario\": 3,\r\n    \"nombre_usuario\": \"Karina\",\r\n    \"anio_ingreso\": 2025\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/usuarios",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "usuarios"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Serie",
+      "item": [
+        {
+          "name": "Post",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Sweet Home\",\r\n    \"anio_publicacion\": 2020,\r\n    \"anio_termino\": 2024,\r\n    \"sinopsis\": \"Un adolescente aislado se muda a un complejo de apartamentos donde los residentes comienzan a transformarse en monstruos. Junto a otros sobrevivientes, lucha por mantenerse con vida mientras enfrentan horrores y descubren el origen de la infección.\",\r\n    \"pais_origen\": \"Corea del Sur\",\r\n    \"reparto\": [\"Song Kang\", \"Lee Jin-wook\", \"Lee Si-young\"],\r\n    \"duracion\": 50,\r\n    \"episodios\": 26\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/series",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Put",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_serie\": 2,\r\n    \"nombre\": \"Dark\",\r\n    \"anio_publicacion\": 2017,\r\n    \"anio_termino\": 2020,\r\n    \"sinopsis\": \"En un pequeño pueblo alemán, la desaparición de dos niños revela secretos oscuros y una compleja red de viajes en el tiempo que conecta varias generaciones.\",\r\n    \"pais_origen\": \"Alemania\",\r\n    \"reparto\": [\"Louis Hofmann\", \"Lisa Vicari\", \"Oliver Masucci\"],\r\n    \"duracion\": 60,\r\n    \"episodios\": 26\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/series",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetTodas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/series",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetPorId",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/series/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/series/5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetActor",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/series/actor/Jensen Ackles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series",
+                "actor",
+                "Jensen Ackles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAñoPublicacion",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/series/anio/2026",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "series",
+                "anio",
+                "2026"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reseña",
+      "item": [
+        {
+          "name": "Post",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"descripcion\": \"Buena historia, pero podría mejorar el ritmo\",\r\n  \"estrellas\": 4,\r\n  \"valoracion\": 7,\r\n  \"usuario\": { \"id_usuario\": 2 },\r\n  \"serie\": { \"id_serie\": 1 }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/resenas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resenas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetTodas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resenas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resenas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resenas/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resenas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetReseñasPorSerie",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resenas/serie/Veil%20of%20Shadow",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resenas",
+                "serie",
+                "Veil%20of%20Shadow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Put",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_resena\": 8,\r\n  \"descripcion\": \"Buena historia, pero podría mejorar el ritmo, le falto \",\r\n  \"estrellas\": 4,\r\n  \"valoracion\": 7,\r\n  \"usuario\": { \"id_usuario\": 3 },\r\n  \"serie\": { \"id_serie\": 1 }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/resenas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resenas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetValoracion",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/resenas/nombre/Veil%20of%20Shadow",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "resenas",
+                "nombre",
+                "Veil%20of%20Shadow"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ApiExterna",
+      "item": [
+        {
+          "name": "GET",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/Externa/Supernatural",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "Externa",
+                "Supernatural"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "SpringSecurity",
+      "item": [
+        {
+          "name": "CrearToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\" : \"Antonia\",\r\n    \"password\" : \"1234\",\r\n    \"role\" : \"ROLE_ADMIN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ObtenerToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\" : \"Antonia\",\r\n    \"password\" : \"1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "secret": true
+    },
+    {
+      "key": "token",
+      "secret": true
+    }
+  ]
+}
